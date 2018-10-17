@@ -136,19 +136,19 @@ void mouseCallback(int button, int state, int x, int y)
 	mouseInputButton(button, state, int((double)x/windowSize.X*WIN_SIZE_X), int((double)y/windowSize.Y*WIN_SIZE_Y));
 }
 
-// void keyboardCallback(unsigned char key, int /*x*/, int /*y*/)
-// {
-// 	if (isCapturing())
-// 	{
-// 		captureStop(0);
-// 	}
-// 	else
-// 	{
-// 		handleKey(key);
-// 	}
+void keyboardCallback(unsigned char key, int /*x*/, int /*y*/)
+{
+	if (isCapturing())
+	{
+		captureStop(0);
+	}
+	else
+	{
+		handleKey(key);
+	}
 
-// 	glutPostRedisplay();
-// }
+	glutPostRedisplay();
+}
 
 void keyboardSpecialCallback(int key, int /*x*/, int /*y*/)
 {
